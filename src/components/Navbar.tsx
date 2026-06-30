@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useUser } from '../context/UserContext';
 import '../css/Navbar.css';
+import logo from '../assets/logo.png';
 
 export default function Navbar() {
   const { user } = useUser();
@@ -16,7 +17,7 @@ export default function Navbar() {
       <div className="navbar-inner">
         <Link to="/" className="navbar-logo" onClick={close}>
           <div className="logo-icon">
-            <img src="/src/assets/logo.png" alt="Logo sajta" className="logo-img" />
+            <img src={logo} alt="Logo sajta" className="logo-img" />
           </div>
           <span className="logo-text">Quiz<br/>Master</span>
         </Link>

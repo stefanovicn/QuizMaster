@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useUser } from '../context/UserContext';
 import Button from '../components/Button';
 import '../css/Auth.css';
+import logo from '../assets/logo.png';
 
 export default function Register() {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ export default function Register() {
       <div className="auth-card">
         <div className="auth-header">
           <div className="auth-logo">
-            <img src="/src/assets/logo.png" alt="QuizMaster logo" className="logo-img" />
+            <img src={logo} alt="QuizMaster logo" className="logo-img" />
             <span className="logo-text">Quiz<br />Master</span>
           </div>
           <h1 className="auth-title">Register</h1>

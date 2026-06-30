@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import '../css/Auth.css';
+import logo from '../assets/logo.png';
 
 export default function ForgotPassword() {
   const [step, setStep] = useState<'email' | 'code'>('email');
@@ -53,7 +54,7 @@ export default function ForgotPassword() {
           <>
             <div className="auth-header">
               <div className="auth-logo">
-                <img src="/src/assets/logo.png" alt="QuizMaster logo" className="logo-img" />
+                <img src={logo} alt="QuizMaster logo" className="logo-img" />
               </div>
               <h1 className="auth-title">Forgot password</h1>
             </div>
