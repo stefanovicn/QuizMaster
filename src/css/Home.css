@@ -1,0 +1,136 @@
+
+.home-section {
+  background: var(--bg-card);
+  border: 3px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 28px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+ 
+.home-greeting {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: 0.3px;
+}
+ 
+.home-block {
+  background: var(--bg-section);
+  border: 3px solid var(--border-light);
+  border-radius: var(--radius-card);
+  padding: 20px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+ 
+.home-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+.home-block-title {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--text-primary);
+}
+ 
+.home-carousel-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+ 
+.home-carousel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+ 
+.carousel-arrow {
+  background: none;
+  border: none;
+  color: var(--accent-light);
+  font-size: 25px;
+  font-weight: 900;
+  padding: 8px 4px;
+  flex-shrink: 0;
+  transition: color 0.2s;
+  letter-spacing: -4px;
+}
+ 
+.carousel-arrow:hover {
+  color: var(--accent);
+}
+ 
+.home-quote {
+  background: var(--bg-section);
+  border: 3px solid var(--border-light);
+  border-radius: var(--radius-card);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-quote-text {
+  font-size: 16px;
+  color: var(--text-primary);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.home-quote-author {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .home-section { padding: 18px 14px 22px; }
+  .home-greeting { font-size: 22px; }
+  .home-carousel { grid-template-columns: repeat(2, 1fr); }
+}
+ 
+@media (max-width: 480px) {
+  .home-carousel { grid-template-columns: 1fr; }
+}
+
+.home-quote-skeleton {
+  background: var(--bg-section);
+  border: 3px solid var(--border-light);
+  border-radius: var(--radius-card);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-quote-skeleton-text {
+  height: 16px;
+  width: 80%;
+  background: linear-gradient(90deg, var(--border) 25%, var(--border-light) 50%, var(--border) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+.home-quote-skeleton-author {
+  height: 14px;
+  width: 30%;
+  background: linear-gradient(90deg, var(--border) 25%, var(--border-light) 50%, var(--border) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

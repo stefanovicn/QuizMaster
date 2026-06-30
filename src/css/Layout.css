@@ -1,0 +1,13 @@
+.layout-main {
+  background: var(--bg-card);
+  border: 3px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 28px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+@media (max-width: 600px) {
+  .layout-main { padding: 16px 14px 20px; gap: 20px; }
+}

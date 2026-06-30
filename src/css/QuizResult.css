@@ -1,0 +1,214 @@
+.quiz-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.quiz-result-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.quiz-result-author {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: -12px;
+}
+
+.quiz-result-card {
+  background: var(--bg-card-inner);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.quiz-result-submitted {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.quiz-result-score {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--accent);
+  text-align: center;
+}
+
+.quiz-result-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.quiz-result-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.quiz-result-stars {
+  display: flex;
+  gap: 1px;
+}
+
+.quiz-result-star {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--accent-light);
+  cursor: pointer;
+  padding: 0 1px;
+  line-height: 1;
+  transition: transform 0.1s;
+}
+
+.quiz-result-star:hover {
+  transform: scale(1.2);
+}
+
+.quiz-result-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.quiz-result-actions > .btn {
+  flex: 1;
+}
+
+.quiz-result-error {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 40px 0;
+}
+
+.result-score {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: -8px;
+}
+
+.result-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.result-question-card {
+  background: var(--bg-card-inner);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.result-question--correct { border-color: #4ade80; }
+.result-question--partial  { border-color: #facc15; }
+.result-question--wrong    { border-color: #f87171; }
+
+.result-question-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.result-question-input {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--accent-dim);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  outline: none;
+}
+
+.result-question-correct-answer {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.result-question-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.result-question-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 2px 0;
+  user-select: none;
+}
+
+.result-question-option input[type='checkbox'] {
+  accent-color: var(--accent);
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+
+.result-question-option input[type='radio'] {
+  accent-color: var(--accent);
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .quiz-result-title { font-size: 22px; }
+  .quiz-result-card { padding: 20px 16px; max-width: 100%; }
+  .quiz-result-actions { flex-direction: column; }
+  .result-question-card { padding: 16px 14px; }
+}
+
+.confetti-piece {
+  position: fixed;
+  top: -10px;
+  border-radius: 2px;
+  animation: confettiFall linear forwards;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@keyframes confettiFall {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+

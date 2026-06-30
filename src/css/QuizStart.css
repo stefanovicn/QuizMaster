@@ -1,0 +1,118 @@
+.quiz-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0px 200px;
+}
+
+.quiz-start-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.quiz-start-meta {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
+.quiz-start-meta-left,
+.quiz-start-meta-right {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.quiz-start-meta-right {
+  align-items: flex-end;
+}
+
+.quiz-start-categories {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.quiz-start-cat-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.quiz-start-cat-chip {
+  padding: 4px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--accent-dim);
+  color: var(--white);
+}
+
+.quiz-start-cat-chip:nth-child(3n + 2) { background: var(--accent); }
+.quiz-start-cat-chip:nth-child(3n + 3) { background: #5b21b6; }
+
+.quiz-start-desc-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-card-inner);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.quiz-start-image {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  border: 2px solid var(--border-light);
+}
+
+.quiz-start-long-desc {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.quiz-start-not-found {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 40px 0;
+}
+
+@media (max-width: 900px) {
+  .quiz-start { padding: 0 60px; }
+}
+
+@media (max-width: 600px) {
+  .quiz-start { padding: 0; }
+  .quiz-start-meta { flex-direction: column; gap: 10px; }
+  .quiz-start-meta-right { align-items: flex-start; }
+  .quiz-start-actions { flex-direction: column; align-items: stretch; }
+  .quiz-start-actions .btn { width: 100%; }
+  .quiz-start-title { font-size: 22px; }
+}
+
+.quiz-start-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+

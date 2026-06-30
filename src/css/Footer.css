@@ -1,0 +1,21 @@
+.footer {
+  background: var(--bg-card);
+  border: 3px solid var(--border);
+  border-radius: var(--radius-card);
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 20px;
+}
+
+.footer-copy {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}

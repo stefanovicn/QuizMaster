@@ -1,0 +1,110 @@
+.fce-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fce-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.fce-move-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fce-move-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+/* Shared arrow button used both in header and nav row */
+.fce-arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  border: none;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.fce-arrow-btn:hover:not(:disabled) { background: var(--accent-light); }
+.fce-arrow-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+/* Card */
+.fce-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 20px 20px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 260px;
+}
+
+.fce-card-text {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  resize: none;
+  min-height: 200px;
+}
+
+.fce-card-text::placeholder { color: var(--text-muted); }
+
+.fce-card-side {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  align-self: flex-start;
+}
+
+/* Controls row */
+.fce-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fce-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+}
+
+.fce-nav-count {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-primary);
+  min-width: 36px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .fce-controls { flex-direction: column; align-items: stretch; }
+  .fce-nav { justify-content: center; }
+}
