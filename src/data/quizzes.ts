@@ -1,6 +1,9 @@
 import type { Quiz } from '../models/Quiz';
 import type { Question } from '../models/Question';
 import type { Flashcard } from '../models/Flashcard';
+import fonImage from '../assets/fon.png';
+import csImage from '../assets/cs.png';
+import gkImage from '../assets/gk.png';
 
 const generalKnowledgeQuestions: Question[] = [
   {
@@ -80,6 +83,7 @@ export const ALL_QUIZZES: Quiz[] = [
     language: 'English',
     timeLimit: 300,
     questions: generalKnowledgeQuestions,
+    imageUrl: gkImage
   },
   {
     id: 2,
@@ -93,6 +97,7 @@ export const ALL_QUIZZES: Quiz[] = [
     categories: ['Gaming'],
     language: 'English',
     questions: [],
+    imageUrl: csImage
   },
   {
     id: 3,
@@ -147,7 +152,7 @@ export const ALL_QUIZZES: Quiz[] = [
     categories: ['IT', 'School'],
     language: 'Serbian',
     cards: arosCards,
-    imageUrl: '/src/assets/fon.png'
+    imageUrl: fonImage
   },
   {
     id: 7,
